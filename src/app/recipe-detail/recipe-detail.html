@@ -1,0 +1,9 @@
+<h2>{{ recipe().name }}</h2>
+<img [src]="recipe().imgUrl" [alt]="recipe().name" width="320" />
+<p>{{ recipe().description }}</p>
+<p>Servings: {{ servings() }}</p>
+
+<button type="button" (click)="decrementServings()">-</button>
+<button type="button" (click)="incrementServings()">+</button>
+
+<pre>{{ adjustedIngredients() | json }}</pre>

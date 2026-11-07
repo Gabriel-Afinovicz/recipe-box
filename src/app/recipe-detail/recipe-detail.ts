@@ -1,0 +1,30 @@
+import { Component, computed, input, signal } from '@angular/core';
+import { JsonPipe } from '@angular/common';
+import { RecipeModel } from '../models';
+
+@Component({
+  selector: 'app-recipe-detail',
+  imports: [JsonPipe],
+  templateUrl: './recipe-detail.html',
+  styleUrl: './recipe-detail.css',
+})
+export class RecipeDetail {
+  readonly recipe = input.required<RecipeModel>();
+
+  protected readonly servings = signal<number>(1);
+
+  protected readonly adjustedIngredients = computed(() =>
+    this.recipe().ingredients.map((ingredient) => ({
+      ...ingredient,
+      quantity: ingredient.quantity * this.servings(),
+    })),
+  );
+
+  protected incrementServings(): void {
+    this.servings.update((current) => current + 1);
+  }
+
+  protected decrementServings(): void {
+    this.servings.update((current) => Math.max(1, current - 1));
+  }
+}
