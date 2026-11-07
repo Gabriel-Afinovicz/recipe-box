@@ -1,0 +1,33 @@
+.recipe-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.recipe-switcher button {
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  color: #1e293b;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.recipe-switcher button:hover {
+  background-color: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0.5rem auto;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background-color: #fef3c7;
+  color: #92400e;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
