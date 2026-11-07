@@ -6,6 +6,8 @@
   <p>Description: {{ recipe().description }}</p>
   <p>Servings: {{ servings() }}</p>
 
+  <pre>{{ adjustedIngredients() | json }}</pre>
+
   <button type="button" (click)="selectSpaghetti()">Spaghetti</button>
   <button type="button" (click)="selectSalad()">Salad</button>
 
