@@ -1,6 +1,10 @@
 <main>
   <h1>{{ title() }}</h1>
 
+  <h2>Recipe</h2>
+  <p>Name: {{ recipe().name }}</p>
+  <p>Description: {{ recipe().description }}</p>
+
   <button type="button" (click)="selectSpaghetti()">Spaghetti</button>
   <button type="button" (click)="selectSalad()">Salad</button>
 </main>
