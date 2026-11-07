@@ -9,4 +9,12 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('My Recipe Box');
+
+  protected selectSpaghetti(): void {
+    console.log('Spaghetti Carbonara selected');
+  }
+
+  protected selectSalad(): void {
+    console.log('Caprese Salad selected');
+  }
 }
