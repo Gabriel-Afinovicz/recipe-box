@@ -1,17 +1,4 @@
 <main>
   <h1>{{ title() }}</h1>
-
-  <h2>Recipe</h2>
-  <img [src]="recipe().imgUrl" [alt]="recipe().name" width="320" />
-  <p>Name: {{ recipe().name }}</p>
-  <p>Description: {{ recipe().description }}</p>
-  <p>Servings: {{ servings() }}</p>
-
-  <pre>{{ adjustedIngredients() | json }}</pre>
-
-  <button type="button" (click)="selectSpaghetti()">Spaghetti</button>
-  <button type="button" (click)="selectSalad()">Salad</button>
-
-  <button type="button" (click)="decrementServings()">-</button>
-  <button type="button" (click)="incrementServings()">+</button>
+  <app-recipe-list />
 </main>
