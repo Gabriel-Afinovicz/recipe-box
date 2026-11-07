@@ -4,7 +4,11 @@
   <h2>Recipe</h2>
   <p>Name: {{ recipe().name }}</p>
   <p>Description: {{ recipe().description }}</p>
+  <p>Servings: {{ servings() }}</p>
 
   <button type="button" (click)="selectSpaghetti()">Spaghetti</button>
   <button type="button" (click)="selectSalad()">Salad</button>
+
+  <button type="button" (click)="decrementServings()">-</button>
+  <button type="button" (click)="incrementServings()">+</button>
 </main>
